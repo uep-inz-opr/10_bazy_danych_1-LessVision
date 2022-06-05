@@ -38,5 +38,6 @@ if __name__ == '__main__':
     cursor = sqlite_con.cursor()
     cursor.execute("Select sum(duration) from polaczenia;")
     result = cursor.fetchall()
-    print(result)
-
+    #print(result[0])
+    for row in result:
+        print(row[0])
